@@ -1,4 +1,4 @@
-const jsonGenrater=(message, data) =>
+export const jsonGenrater=(message, data=null) =>
 {
     return {
         message:message,

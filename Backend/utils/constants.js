@@ -1,6 +1,6 @@
 // FOR THE ERROR
 
-const statusCode={
+export  const statusCode={
     SUCCESS:200,
     VALIDATIONERROR:400,
     UNPROSESENTITY:401
