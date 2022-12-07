@@ -1,5 +1,7 @@
-import mongoose from "mongoose"
-const {MONGODB_URL}=process.env
+import mongoose from  "mongoose"
+const MONGODB_URL  = 'mongodb://localhost:27017/AuthSystemPro'
+
+
 export const connect=()=>
 {
     mongoose.connect(MONGODB_URL).then((conn) =>

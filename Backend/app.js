@@ -1,12 +1,15 @@
-import express  from "express";
 import dotenv  from "dotenv";
 dotenv.config()
+import {connect} from './config/db.connection.js'
+connect()
+import express  from "express";
 const app=express();
+app.use(express.json())
 
+import routes from "./routes/user.route.js";
 
-app.get('/',(req, res) =>
-{
-    res.send("Welcome to home Route")
-})
+console.log(routes);
+
+app.use('/api/v1', routes)
 
 export default app;
