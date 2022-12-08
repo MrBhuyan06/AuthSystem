@@ -1,7 +1,7 @@
 import dotenv  from "dotenv";
 dotenv.config()
-import {connect} from './config/db.connection.js'
-connect()
+import {connection} from './config/db.connection.js'
+connection()
 import express  from "express";
 const app=express();
 app.use(express.json())

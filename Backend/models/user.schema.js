@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+mongoose.set('strictQuery', true)
 
 const userSchema= mongoose.Schema(
     {
@@ -23,10 +23,10 @@ const userSchema= mongoose.Schema(
         },
         password:
         {
-            type:Number,
+            type:String,
             required:[true, "password is required"],
-            minLength:[8, "password must be above 8 char"],
-            select:false
+            minLength:[50, "password must be above 8 char"],
+           
             
         },
         token: {

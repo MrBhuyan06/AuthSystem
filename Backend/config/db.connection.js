@@ -1,8 +1,9 @@
 import mongoose from  "mongoose"
+// mongoose.set('strictQuery', true)
 const MONGODB_URL  = 'mongodb://localhost:27017/AuthSystemPro'
 
 
-export const connect=()=>
+export const connection=()=>
 {
     mongoose.connect(MONGODB_URL,{
         useNewUrlParser: true,
