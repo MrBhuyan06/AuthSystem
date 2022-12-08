@@ -152,3 +152,10 @@ export const login = async (req, res) => {
     console.log(`hello ${err}`);
   }
 };
+
+//dashboard route
+export const dashboard = async (req, res) =>
+{
+  const {userid, email}=req.user
+  res.send(`welcome to the dashboard ${userid} ${email}`)
+}
